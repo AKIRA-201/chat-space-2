@@ -17,9 +17,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
-|password|integer|null: false|
-|email|integer|null: false|
+|name|string|null: false, unique: true|
+|email|string|null: false, unique: true|
 
 ### Association
 - has_many :massages
@@ -30,10 +29,10 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
+|body|text||
 |image|string||
-|user_id|integer|null: false, index: true, foreign_key: true|
-|group_id|integer|null: false, index: true, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -44,7 +43,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
+|group_name|string|null: false, unique: true|
 
 ### Association
 - has_many :massages

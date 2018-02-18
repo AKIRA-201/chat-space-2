@@ -259,3 +259,81 @@ Migrating to CreatePrototypeTags (20180213021251)
   [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (1.0ms)[0m  [1m[34mSELECT RELEASE_LOCK(8445024276154775190)[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/tests/index" for 127.0.0.1 at 2018-02-18 12:30:45 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/tests/index"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-02-18 12:31:10 +0900
+Processing by MassagesController#index as HTML
+  Rendering massages/index.html.haml within layouts/application
+  Rendered massages/index.html.haml within layouts/application (1.4ms)
+Completed 401 Unauthorized in 295ms
+
+
+  
+ActionView::Template::Error (Indenting at the beginning of the document is illegal.):
+    1:   %body
+    2:     .notification
+    3:     .chat-side
+    4:       .chat-side__user
+  
+app/views/massages/index.html.haml:1
+Started GET "/" for 127.0.0.1 at 2018-02-18 12:35:59 +0900
+Processing by MassagesController#index as HTML
+  Rendering massages/index.html.haml within layouts/application
+  Rendered massages/index.html.haml within layouts/application (1.1ms)
+Completed 401 Unauthorized in 11ms
+
+
+  
+ActionView::Template::Error (Indenting at the beginning of the document is illegal.):
+    1:     .notification
+    2:     .chat-side
+    3:       .chat-side__user
+    4:         .chat-side__user-content
+  
+app/views/massages/index.html.haml:1
+Started GET "/" for 127.0.0.1 at 2018-02-18 12:37:58 +0900
+Processing by MassagesController#index as HTML
+  Rendering massages/index.html.haml within layouts/application
+  Rendered massages/index.html.haml within layouts/application (2.8ms)
+Completed 401 Unauthorized in 11ms
+
+
+  
+ActionView::Template::Error (Invalid filter name "::after".):
+    38:         2018/02/12 19:38:56
+    39:       .chat-main__massage-body
+    40:         aaa
+    41:       ::after
+    42:   .chat-main__footer
+    43:     .form{ id:'new massage', enctype:'multipart/form-data', action:'/groups/782/massages', accept-charset: 'UTF-8', method: 'post'}
+  
+app/views/massages/index.html.haml:41

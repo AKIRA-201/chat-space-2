@@ -1,0 +1,63 @@
+.wrapper
+  %p.create-chatgroup
+    チャットグループが作成されました。
+  .chat-side
+    .chat-side__user
+      .chat-side__user-content
+        .chat-side__user-name
+          kawashima
+          = link_to '/' do
+            %i.fa.fa-edit.icon
+          = link_to '/' do
+            %i.fa.fa-cog.icon
+    .chat-side__groups
+      .chat-side__groups-list
+        .chat-side__groups-list--group
+          .chat-side__groups-list--group-name
+            america
+          .chat-side__groups-list--group-massage
+            USA USA
+      .chat-side__groups-list
+        .chat-side__groups-list--group
+          .chat-side__groups-list--group-name
+            nippon
+          .chat-side__groups-list--group-massage
+            JPN JPN
+  .chat-main
+    .chat-main__header
+      .chat-main__header--group
+        .chat-main__header--group-name
+          america
+          %input.button{type: "button",name: "edit", value: "Edit"}
+      .chat-main__header--member
+        MEMBER: kawashima
+    .chat-main__body
+      .chat-main__body--messages-list
+        .chat-main__body--massages-list--massage
+          .chat-main__body--massages-list--massage-name
+            kawashima
+          .chat-main__body--massages-list--massage-time
+            2018/02/12 19:38:00
+          .chat-main__body--massages-list--massage-body
+            aaaaaaa
+      .chat-main__body--messages-list
+        .chat-main__body--massages-list--massage
+          .chat-main__body--massages-list--massage-name
+            iida
+          .chat-main__body--massages-list--massage-time
+            2018/02/12 19:39:00
+          .chat-main__body--massages-list--massage-body
+            aaaaaaa
+          .chat-main__body--messages-list
+      .chat-main__body--massages-list--massage
+        .chat-main__body--massages-list--massage-name
+          kawashima
+        .chat-main__body--massages-list--massage-time
+          2018/02/13 19:39:00
+        .chat-main__body--massages-list--massage-body
+          oooooooooooooo
+    .chat-main__footer
+      %form.chat-main__footer--form
+        %input.chat-main__footer--form-massage{placeholder: "type a massage"}
+          %i.fa.fa-image.icon
+        %input.chat-main__footer--input{type: "button", name: "send", value: "Send"}

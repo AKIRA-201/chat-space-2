@@ -3,7 +3,7 @@
   .create-chatgroup{
     background-color: $skyblueColor;
     text-align: center;
-    color: #fff;
+    color: $white;
   }
 
   .chat-side{
@@ -11,7 +11,7 @@
     width: 260px;
     background-color: #2f3e51;
     float: left;
-    color: #FFFFFF;
+    color: $white;
     text-align: left;
 
     a{
@@ -28,7 +28,7 @@
         padding-top: 10px;
         &-name{
           font-size: 16px;
-          color: #FFFFFF;
+          color: $white;
           font: bold;
         }
       }
@@ -60,87 +60,86 @@
     width: calc(100vw - 300px);
     float: left;
 
-      &__header{
-        height: 100px;
-        border-bottom: 2px solid #eeeeee;
-        padding: 0px 40px;
-        &--group{
+    &__header{
+      height: 100px;
+      border-bottom: 2px solid #eeeeee;
+      padding: 0px 40px;
+      &--group{
+        &-name{
+          padding-top: 35px;
+          font-size: 20px;
+          color: #333333;
+          .button{
+            border: 1px $skyblueColor solid;
+            font-size: 12px;
+            padding: 10px 20px;
+            background-color: white;
+            color: $skyblueColor;
+            float: right;
+            position: relative; bottom: 7px;
+          }
+        }
+      }
+      &--member{
+        padding-top: 15px;
+        font-size: 12px;
+        color: #999999;
+      }
+    }
+
+    &__body{
+      height: calc(100vh - 190px);
+      padding: 0px 40px;
+      &--massages-list{
+        &--massage{
           &-name{
-            padding-top: 35px;
-            font-size: 20px;
-            color: #333333;
-            .button{
-              border: 1px $skyblueColor solid;
-              font-size: 12px;
-              padding: 10px 20px;
-              background-color: white;
-              color: $skyblueColor;
-              float: right;
-              position: relative; bottom: 7px;
-            }
-          }
-        }
-        &--member{
-          padding-top: 15px;
-          font-size: 12px;
-          color: #999999;
-        }
-      }
-
-      &__body{
-        height: calc(100vh - 190px);
-        padding: 0px 40px;
-        &--massages-list{
-          &--massage{
-            &-name{
-              font: bold;
-              line-height: 10px;
-              padding-top: 46px;
-              padding-bottom:10px;
-              font-weight: bold;
-            }
-            &-time{
-              font-size: 12px;
-              color:#999999;
-            }
-            &-body{
-              font-size: 14px;
-              color:#434A54;
-            }
-          }
-        }
-      }
-
-
-      &__footer{
-        height: 90px;
-        padding: 0px 40px;
-        background-color: #B8C3C7;
-        i{
-          background-color: white;
-          padding: 17px 1px;
-          position: relative; right: 5px;
-        }
-        &--form{
-          height: 50px;
-          box-sizing: border-box;
-          padding: 20px 0px;
-          &-massage{
-            width: calc(100% - 125px);
-            padding: 13px 0 13px 10px;
+            font: bold;
             line-height: 10px;
-            border: none;
-            box-sizing: border-box;
-            font-size: 16px;
+            padding-top: 46px;
+            padding-bottom:10px;
+            font-weight: bold;
+          }
+          &-time{
+            font-size: 12px;
+            color:#999999;
+          }
+          &-body{
+            font-size: 14px;
+            color:#434A54;
           }
         }
-        &--input{
+      }
+    }
+
+    &__footer{
+      height: 90px;
+      padding: 0px 40px;
+      background-color: #B8C3C7;
+      i{
+        background-color: white;
+        padding: 17px 1px;
+        position: relative; right: 5px;
+      }
+      &--form{
+        height: 50px;
+        box-sizing: border-box;
+        padding: 20px 0px;
+        &-massage{
+          width: calc(100% - 125px);
+          padding: 13px 0 13px 10px;
+          line-height: 10px;
           border: none;
-          padding: 13px 30px ;
-          float: right;
-          background-color: $skyblueColor;
-          color: white;
+          box-sizing: border-box;
+          font-size: 16px;
         }
       }
+      &--input{
+        border: none;
+        padding: 13px 30px ;
+        float: right;
+        background-color: $skyblueColor;
+        color: white;
+      }
+    }
   }
 }

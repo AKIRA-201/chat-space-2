@@ -11,17 +11,17 @@
           = link_to '/' do
             %i.fa.fa-edit.icon
     .chat-side__groups
-      .chat-side__groups-list
-        .chat-side__groups-list--group
-          .chat-side__groups-list--group-name
+      .groups-list
+        .groups-list--group
+          .groups-list--group-name
             america
-          .chat-side__groups-list--group-massage
+          .groups-list--group-message
             USA USA
-      .chat-side__groups-list
-        .chat-side__groups-list--group
-          .chat-side__groups-list--group-name
+      .groups-list
+        .groups-list--group
+          .groups-list--group-name
             nippon
-          .chat-side__groups-list--group-massage
+          .groups-list--group-message
             JPN JPN
   .chat-main
     .chat-main__header
@@ -32,9 +32,9 @@
       .chat-main__header--member
         MEMBER: kawashima
     .chat-main__body
-      = render partial: "index"
+      = render partial: "message"
     .chat-main__footer
       %form.chat-main__footer--form
-        %input.chat-main__footer--form-massage{placeholder: "type a massage"}
+        %input.chat-main__footer--form-message{placeholder: "type a message"}
           %i.fa.fa-image.icon
         %input.chat-main__footer--input{type: "button", name: "send", value: "Send"}

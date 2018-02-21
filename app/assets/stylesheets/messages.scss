@@ -38,7 +38,7 @@
     &__groups{
       height: calc(100vh - 100px);
       padding: 0px 20px;
-      &-list{
+      .groups-list{
         padding-top: 20px;
         padding-bottom: 40px;
         &--group{
@@ -46,7 +46,7 @@
             font-size: 15px;
             padding-bottom: 5px;
           }
-          &-massage{
+          &-message{
             font-size: 11px;
 
           }
@@ -91,8 +91,8 @@
     &__body{
       height: calc(100vh - 190px);
       padding: 0px 40px;
-      &--massages-list{
-        &--massage{
+      .messages-list{
+        &--message{
           &-name{
             font: bold;
             line-height: 10px;
@@ -125,7 +125,7 @@
         height: 50px;
         box-sizing: border-box;
         padding: 20px 0px;
-        &-massage{
+        &-message{
           width: calc(100% - 125px);
           padding: 13px 0 13px 10px;
           line-height: 10px;

@@ -21,11 +21,11 @@
 |email|string|null: false, unique: true|
 
 ### Association
-- has_many :massages
+- has_many :messages
 - has_many :members
 - has_many :groups, through: :members
 
-## massagesテーブル
+## messagesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -46,6 +46,6 @@
 |group_name|string|null: false, unique: true|
 
 ### Association
-- has_many :massages
+- has_many :messages
 - has_many :users, through: :members
 - has_many :members

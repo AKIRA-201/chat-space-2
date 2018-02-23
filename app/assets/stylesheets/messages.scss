@@ -14,9 +14,10 @@
     color: $white;
     text-align: left;
 
-    a{
+    .icon{
       color: white;
       float: right;
+      position: relative; top: 28px;
     }
 
     &__user{

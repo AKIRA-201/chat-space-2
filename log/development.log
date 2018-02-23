@@ -5311,3 +5311,489 @@ Processing by MessagesController#index as HTML
 Completed 200 OK in 43ms (Views: 40.1ms | ActiveRecord: 0.3ms)
 
 
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 15:26:39 +0900
+  [1m[35m (6.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5XJ0VXES5lsYT8PAtDDLwqk4yy8fBIo8r2YQpm3VY/ZRZT5w2yBhGvRqNTKd1zOQUBPqTV77ebd4PJJEzPNl0A==", "chat_group"=>{"name"=>"aaaaaaaa"}, "group"=>{"user_ids"=>["", "1", "2"]}, "commit"=>"Save"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 2)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 151ms (ActiveRecord: 63.5ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007fbc201e1f20>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 15:27:41 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5XJ0VXES5lsYT8PAtDDLwqk4yy8fBIo8r2YQpm3VY/ZRZT5w2yBhGvRqNTKd1zOQUBPqTV77ebd4PJJEzPNl0A==", "chat_group"=>{"name"=>"aaaaaaaa"}, "group"=>{"user_ids"=>["", "1", "2"]}, "commit"=>"Save"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 2)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007fbc20551f48>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 15:30:47 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5XJ0VXES5lsYT8PAtDDLwqk4yy8fBIo8r2YQpm3VY/ZRZT5w2yBhGvRqNTKd1zOQUBPqTV77ebd4PJJEzPNl0A==", "chat_group"=>{"name"=>"aaaaaaaa"}, "group"=>{"user_ids"=>["", "1", "2"]}, "commit"=>"Save"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 2)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 52ms (ActiveRecord: 10.5ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007fbc1e830bd0>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 15:31:14 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5XJ0VXES5lsYT8PAtDDLwqk4yy8fBIo8r2YQpm3VY/ZRZT5w2yBhGvRqNTKd1zOQUBPqTV77ebd4PJJEzPNl0A==", "chat_group"=>{"name"=>"aaaaaaaa"}, "group"=>{"user_ids"=>["", "1", "2"]}, "commit"=>"Save"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 2)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 62ms (ActiveRecord: 12.1ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007fbc202b27b0>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 15:32:55 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5XJ0VXES5lsYT8PAtDDLwqk4yy8fBIo8r2YQpm3VY/ZRZT5w2yBhGvRqNTKd1zOQUBPqTV77ebd4PJJEzPNl0A==", "chat_group"=>{"name"=>"aaaaaaaa"}, "group"=>{"user_ids"=>["", "1", "2"]}, "commit"=>"Save"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 2)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 12ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007fbc1b3c0ad0>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started GET "/groups/new" for 127.0.0.1 at 2018-02-23 15:39:53 +0900
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/new.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered groups/new.html.haml within layouts/application (103.9ms)
+  Rendered layouts/_flash.html.haml (2.4ms)
+Completed 200 OK in 434ms (Views: 361.2ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 15:39:59 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cRmu6TQvW6UyUpaFmZc+q1ZYUVml2TzPPxwoDLbiazXFDuTMnh3c5N53YHewcMb5r3NwO+Qmz0ToRqruF8RtEw==", "group_name"=>"aaaaaaaa", "group"=>{"user_ids"=>["", "1", "2"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 2)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 12ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007f811315bf08>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 15:42:13 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cRmu6TQvW6UyUpaFmZc+q1ZYUVml2TzPPxwoDLbiazXFDuTMnh3c5N53YHewcMb5r3NwO+Qmz0ToRqruF8RtEw==", "group_name"=>"aaaaaaaa", "group"=>{"user_ids"=>["", "1", "2"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 2)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 17ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007f81133077f8>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 15:54:09 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cRmu6TQvW6UyUpaFmZc+q1ZYUVml2TzPPxwoDLbiazXFDuTMnh3c5N53YHewcMb5r3NwO+Qmz0ToRqruF8RtEw==", "group_name"=>"aaaaaaaa", "group"=>{"user_ids"=>["", "1", "2"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 2)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 11ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007f810d3faee0>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 15:54:20 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cRmu6TQvW6UyUpaFmZc+q1ZYUVml2TzPPxwoDLbiazXFDuTMnh3c5N53YHewcMb5r3NwO+Qmz0ToRqruF8RtEw==", "group_name"=>"aaaaaaaa", "group"=>{"user_ids"=>["", "1", "2"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 2)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 14ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007f810e696f40>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started GET "/" for 127.0.0.1 at 2018-02-23 15:54:28 +0900
+Processing by MessagesController#index as HTML
+  [1m[36mUser Load (7.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_message.html.haml (4.4ms)
+  Rendered messages/index.html.haml within layouts/application (13.6ms)
+  Rendered layouts/_flash.html.haml (1.6ms)
+Completed 200 OK in 49ms (Views: 37.4ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2018-02-23 15:54:30 +0900
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering users/edit.html.haml within layouts/application
+  Rendered users/edit.html.haml within layouts/application (9.5ms)
+  Rendered layouts/_flash.html.haml (1.9ms)
+Completed 200 OK in 40ms (Views: 33.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2018-02-23 15:54:33 +0900
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/new.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered groups/new.html.haml within layouts/application (10.4ms)
+  Rendered layouts/_flash.html.haml (1.8ms)
+Completed 200 OK in 49ms (Views: 39.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 15:54:40 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hGh4kUg6rEfr++MsEY2KAgiEHWcF5IyXQZ//iRp4cN5pfMrTW58yJkd0uxIzRvf69gFFSeFaB9esLq26VUbGKA==", "group_name"=>"qqqq", "group"=>{"user_ids"=>["", "2"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007f811686bf20>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 15:56:40 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ex6ft2a3FxPqJ0Vg087lSROd4e4TP67aeOOMir0QNEmnCdWSzIWQUgYCs5L6KR0b6rbAjFLAXVGvuQ5oHDYybw==", "group_name"=>"qqqq", "group"=>{"user_ids"=>[""]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE 1=0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 9ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007f811794acd8>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 15:56:51 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ex6ft2a3FxPqJ0Vg087lSROd4e4TP67aeOOMir0QNEmnCdWSzIWQUgYCs5L6KR0b6rbAjFLAXVGvuQ5oHDYybw==", "group_name"=>"qqqq", "group"=>{"user_ids"=>["", "1", "2"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 2)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 14ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007f8115910148>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started GET "/" for 127.0.0.1 at 2018-02-23 15:58:18 +0900
+Processing by MessagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_message.html.haml (4.0ms)
+  Rendered messages/index.html.haml within layouts/application (14.7ms)
+  Rendered layouts/_flash.html.haml (1.7ms)
+Completed 200 OK in 49ms (Views: 45.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2018-02-23 15:58:26 +0900
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/new.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered groups/new.html.haml within layouts/application (9.3ms)
+  Rendered layouts/_flash.html.haml (2.1ms)
+Completed 200 OK in 44ms (Views: 35.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 15:58:34 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hVXI+OPRRjcP/wRcrMJdPGAH+AFGkFCgLtRL2YSntLBoQXq68HTYVqNwXGKOCSDEnoKgL6Iu2+DDZRnqy5kCRg==", "group_name"=>"qqqq", "group"=>{"user_ids"=>["", "1", "2"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 2)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 13ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007f8113737260>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 16:02:08 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YKVMlkMAJRQxJ3c9eKyCS5DuoBVIGUKptx58qZuJ8drUsgaz6TKiVd0Cgc9RS3oZacWBdwnmsSJgRP5LOq/3/A==", "group_name"=>"qqqq", "group"=>{"user_ids"=>[""]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE 1=0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 10ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007f810e71c910>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 16:02:14 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YKVMlkMAJRQxJ3c9eKyCS5DuoBVIGUKptx58qZuJ8drUsgaz6TKiVd0Cgc9RS3oZacWBdwnmsSJgRP5LOq/3/A==", "group_name"=>"qqqq", "group"=>{"user_ids"=>["", "1"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 12ms (ActiveRecord: 1.5ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007f8114d20040>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started GET "/" for 127.0.0.1 at 2018-02-23 16:03:37 +0900
+Processing by MessagesController#index as HTML
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_message.html.haml (4.8ms)
+  Rendered messages/index.html.haml within layouts/application (13.7ms)
+  Rendered layouts/_flash.html.haml (1.5ms)
+Completed 200 OK in 55ms (Views: 39.1ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-02-23 16:04:21 +0900
+Processing by MessagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  Rendered messages/_message.html.haml (3.1ms)
+  Rendered messages/index.html.haml within layouts/application (11.0ms)
+  Rendered layouts/_flash.html.haml (1.6ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2018-02-23 16:09:14 +0900
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/new.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered groups/new.html.haml within layouts/application (9.0ms)
+  Rendered layouts/_flash.html.haml (1.9ms)
+Completed 200 OK in 43ms (Views: 33.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 16:09:15 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o9I6yqlGDkGAKpYUSymbWAWhGNVQ7hTtwdAR7uF/A5FOxoiIuuOQICylzipp4uag+yRA+7RQn60sYUPdrkG1Zw==", "group_name"=>"", "group"=>{"user_ids"=>["", "2"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 11ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007f810e32e830>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 16:12:20 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H7TSNsp+aJLgKpX8+aCp/u2jO5waRvsBmfdp4Vut772ro5gTYEzv0wwPYw7QR1GsFIga/lu5CIpOresD+ovpmw==", "group_name"=>"", "group"=>{"user_ids"=>["", "2"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 12ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007f810e50b248>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 16:13:37 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H7TSNsp+aJLgKpX8+aCp/u2jO5waRvsBmfdp4Vut772ro5gTYEzv0wwPYw7QR1GsFIga/lu5CIpOresD+ovpmw==", "group_name"=>"", "group"=>{"user_ids"=>["", "2"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007f8115ce2690>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 16:14:31 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H7TSNsp+aJLgKpX8+aCp/u2jO5waRvsBmfdp4Vut772ro5gTYEzv0wwPYw7QR1GsFIga/lu5CIpOresD+ovpmw==", "group_name"=>"", "group"=>{"user_ids"=>["", "2"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007f8114d7aae0>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 16:15:00 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H7TSNsp+aJLgKpX8+aCp/u2jO5waRvsBmfdp4Vut772ro5gTYEzv0wwPYw7QR1GsFIga/lu5CIpOresD+ovpmw==", "group_name"=>"", "group"=>{"user_ids"=>["", "2"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007f811367cac8>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 16:15:31 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H7TSNsp+aJLgKpX8+aCp/u2jO5waRvsBmfdp4Vut772ro5gTYEzv0wwPYw7QR1GsFIga/lu5CIpOresD+ovpmw==", "group_name"=>"", "group"=>{"user_ids"=>["", "2"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007f8117b426a8>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 16:16:13 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H7TSNsp+aJLgKpX8+aCp/u2jO5waRvsBmfdp4Vut772ro5gTYEzv0wwPYw7QR1GsFIga/lu5CIpOresD+ovpmw==", "group_name"=>"", "group"=>{"user_ids"=>["", "2"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007f810d448cd0>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 16:17:18 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H7TSNsp+aJLgKpX8+aCp/u2jO5waRvsBmfdp4Vut772ro5gTYEzv0wwPYw7QR1GsFIga/lu5CIpOresD+ovpmw==", "group_name"=>"", "group"=>{"user_ids"=>["", "2"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 401 Unauthorized in 10ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Group:0x007f81148b46a0>):
+  
+app/controllers/groups_controller.rb:9:in `create'
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 16:20:21 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H7TSNsp+aJLgKpX8+aCp/u2jO5waRvsBmfdp4Vut772ro5gTYEzv0wwPYw7QR1GsFIga/lu5CIpOresD+ovpmw==", "group_name"=>"aaaaaaaaa", "group"=>{"user_ids"=>["", "2"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering groups/new.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered groups/new.html.haml within layouts/application (8.4ms)
+  Rendered layouts/_flash.html.haml (1.6ms)
+Completed 200 OK in 75ms (Views: 29.6ms | ActiveRecord: 7.9ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 16:21:00 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HUsYuj+Y2iNX3GqyBI1kggPoBv374lQ9pZ5vhrgzmNGpXFKflapdYrv5nEAtapzQ+sMnn7odp7ZyxO1kGRWe9w==", "group_name"=>"USA", "group"=>{"user_ids"=>["", "2"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering groups/new.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered groups/new.html.haml within layouts/application (9.8ms)
+  Rendered layouts/_flash.html.haml (1.6ms)
+Completed 200 OK in 40ms (Views: 32.4ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 16:21:01 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ghCa0j2EjIerlhaDe01Qyd+ItX7xF3wP8rrWO3hGrN82B9D3l7YLxkez4HFSqqibJqOUHLDoj4Ql4FTZ2WCq+Q==", "group_name"=>"", "group"=>{"user_ids"=>["", "2"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering groups/new.html.haml within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered groups/new.html.haml within layouts/application (8.6ms)
+  Rendered layouts/_flash.html.haml (1.8ms)
+Completed 200 OK in 41ms (Views: 32.3ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 16:21:07 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"buIQ8Stjd7pZ6vwukhEiv+lyL0+7GlGM/xJgqfBpv53a9VrUgVHw+7XPCty79trtEFkOLfrlogcoSOJLUU+5uw==", "group_name"=>"USA", "group"=>{"user_ids"=>["", "1", "2"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 2)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering groups/new.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered groups/new.html.haml within layouts/application (8.1ms)
+  Rendered layouts/_flash.html.haml (1.3ms)
+Completed 200 OK in 35ms (Views: 26.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2018-02-23 16:21:13 +0900
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QG9Wgg3zLS1mKPOtD1IKbERgzxIY0zEolee1FhJpgo/0eBynp8GqbIoNBV8mtfI+vUvucFkswqNCvTf0s0+EqQ==", "group_name"=>"USA", "group"=>{"user_ids"=>["", "1", "2"]}, "commit"=>"Create Group"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` IN (1, 2)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering groups/new.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered groups/new.html.haml within layouts/application (8.7ms)
+  Rendered layouts/_flash.html.haml (1.2ms)
+Completed 200 OK in 36ms (Views: 26.5ms | ActiveRecord: 2.8ms)
+
+

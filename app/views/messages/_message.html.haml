@@ -1,24 +1,9 @@
 .messages-list
   .messages-list--message
     .messages-list--message-name
-      kawashima
+      = message.user.name
     .messages-list--message-time
-      2018/02/12 19:38:00
+      = message.created_at
+  - if message.body.present?
     .messages-list--message-body
-      aaaaaaa
-.messages-list
-  .messages-list--message
-    .messages-list--message-name
-      iida
-    .messages-list--message-time
-      2018/02/12 19:39:00
-    .messages-list--message-body
-      aaaaaaa
-    .messages-list
-.messages-list--message
-  .messages-list--message-name
-    kawashima
-  .messages-list--message-time
-    2018/02/13 19:39:00
-  .messages-list--message-body
-    oooooooooooooo
+      = message.body

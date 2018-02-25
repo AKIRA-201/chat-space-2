@@ -15,8 +15,7 @@
     .chat-main__footer
       = form_for [@group, @message], html: {class: 'chat-main__footer--form'} do |f|
         = f.text_field :body, class: 'chat-main__footer--form-message', placeholder: 'type a message'
-        / .form
-        /   = f.label :image, class: 'form__image'
-        /     = fa_icon 'picture-o', class: 'icon'
-        /     = f.file_field :image, class: 'hidden'
+        / = f.label :image, class: 'form', value: ""
+        = fa_icon 'picture-o', class: 'icon'
+        = f.file_field :image, class: 'hidden'
         = f.submit type: "submit", name: "send", value: "Send", class: "chat-main__footer--input"

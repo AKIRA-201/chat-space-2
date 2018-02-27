@@ -3,5 +3,8 @@ class Message < ApplicationRecord
   belongs_to :user
 
   mount_uploader :image, ImageUploader
-  validates :body, presence: true
+  validates :body_or_image, presence: true
+  def body_or_image
+    body.present? || image.present?
+  end
 end

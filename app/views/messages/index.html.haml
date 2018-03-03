@@ -10,12 +10,12 @@
       .chat-main__header--member
         MEMBER:
         = @group.users.name
-    .chat-main__body
+    #target.chat-main__body
       = render @messages
     .chat-main__footer
-      = form_for [@group, @message], html: {class: 'chat-main__footer--form'} do |f|
+      = form_for [@group, @message], html: {class: 'chat-main__footer--form', id: "new_message"} do |f|
         = f.text_field :body, class: 'chat-main__footer--form-message', placeholder: 'type a message'
-        / = f.label :image, class: 'form', value: ""
-        = fa_icon 'picture-o', class: 'icon'
-        = f.file_field :image, class: 'hidden'
-        = f.submit type: "submit", name: "send", value: "Send", class: "chat-main__footer--input"
+        = f.label :image, class: 'form__label' do
+          %i.fa.fa-image
+          = f.file_field :image, class: 'hidden'
+          = f.submit type: "submit", name: "send", value: "Send", class: "chat-main__footer--input"

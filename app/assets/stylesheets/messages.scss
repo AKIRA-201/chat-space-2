@@ -39,9 +39,12 @@
     &__groups{
       height: calc(100vh - 100px);
       padding: 0px 20px;
+      overflow: scroll;
       .groups-list{
         padding-top: 20px;
         padding-bottom: 40px;
+        color: $white;
+        text-decoration: none;
         &--group{
           &-name{
             font-size: 15px;
@@ -49,7 +52,6 @@
           }
           &-message{
             font-size: 11px;
-
           }
         }
       }
@@ -92,6 +94,7 @@
     &__body{
       height: calc(100vh - 190px);
       padding: 0px 40px;
+      overflow: scroll;
       .messages-list{
         &--message{
           &-name{
@@ -109,6 +112,9 @@
             font-size: 14px;
             color:#434A54;
           }
+          .img{
+            height: calc(100vh - 190px);
+          }
         }
       }
     }
@@ -117,7 +123,7 @@
       height: 90px;
       padding: 0px 40px;
       background-color: #B8C3C7;
-      .icon{
+      .i{
         background-color: white;
         padding: 17px 1px;
         position: relative; right: 5px;
@@ -133,6 +139,11 @@
           border: none;
           box-sizing: border-box;
           font-size: 16px;
+        }
+        .form__label{
+          .hidden{
+            display: none;
+          }
         }
       }
       &--input{

@@ -36,7 +36,6 @@ $(function(){
       data: {id: message_id}
     })
     .done(function(data){
-      console.log(data.messages)
       data.messages.forEach(function(message){
         if(message.id > message_id){
           var html =buildHTML(message);

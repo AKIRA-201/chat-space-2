@@ -30,7 +30,7 @@ $(function(){
     })
     .done(function(data){
       data.messages.forEach(function(message){
-        message.id > messageId ? buildHTML(message) : "";
+        buildHTML(message)
         $('.chat-main__body').animate({scrollTop:$('#target')[0].scrollHeight});
       });
     })

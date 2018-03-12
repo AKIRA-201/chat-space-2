@@ -1,9 +1,6 @@
 $(function(){
   function buildHTML(message){
-    var insertImage = '';
-    if(message.image){
-      insertImage =`<img src=${message.image.url} class="img">`;
-    }
+    var insertImage = message.image == null ? "" : `<img src=${message.image.url} class="img">`;
     var html = `<div class="messages-list" id="target" data-message-id="${message.id}">
                   <div class="messages-list--message">
                     <div class="messages-list--message-name">
@@ -25,19 +22,19 @@ $(function(){
 
   function update(){
     if($('.messages-list')[0]){
-      var message_id = $('.messages-list:last').data('message-id');
+      var messageId = $('.messages-list:last').data('message-id');
     } else{
-      var message_id = 0
+      var messageId = 0
     }
     $.ajax({
       url: location.href,
       type: 'GET',
       dataType: 'json',
-      data: {id: message_id}
+      data: {id: messageId}
     })
     .done(function(data){
       data.messages.forEach(function(message){
-        if(message.id > message_id){
+        if(message.id > messageId){
           var html =buildHTML(message);
           $('.chat-main__body').append(html);
           $('.chat-main__body').animate({scrollTop:$('#target')[0].scrollHeight});
@@ -64,10 +61,6 @@ $(function(){
     .done(function(data){
       var html =buildHTML(data);
       $('.chat-main__body').append(html).trigger('create');
-      $('.chat-main__footer--form-message').val('')
-      if(data.image == null)$('.img').remove();
-      $('.chat-main__footer--form').val('')
-      $('.img').val('')
       $('.chat-main__body').animate({scrollTop:$('#target')[0].scrollHeight});
     })
     .fail(function(){

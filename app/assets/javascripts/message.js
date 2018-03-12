@@ -15,17 +15,13 @@ $(function(){
                     ${insertImage}
                   </div>
                 </div>`
-    return html;
+    $('.chat-main__body').append(html);
   }
 
-  var interval = setInterval(update, 5000);
+  setInterval(update, 5000);
 
   function update(){
-    if($('.messages-list')[0]){
-      var messageId = $('.messages-list:last').data('message-id');
-    } else{
-      var messageId = 0
-    }
+    var messageId = ('.messages-list') == null ? "" : $('.messages-list:last').data('message-id');
     $.ajax({
       url: location.href,
       type: 'GET',
@@ -34,11 +30,8 @@ $(function(){
     })
     .done(function(data){
       data.messages.forEach(function(message){
-        if(message.id > messageId){
-          var html =buildHTML(message);
-          $('.chat-main__body').append(html);
-          $('.chat-main__body').animate({scrollTop:$('#target')[0].scrollHeight});
-        }
+        message.id > messageId ? buildHTML(message) : "";
+        $('.chat-main__body').animate({scrollTop:$('#target')[0].scrollHeight});
       });
     })
     .fail(function(data){
@@ -59,8 +52,9 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      var html =buildHTML(data);
-      $('.chat-main__body').append(html).trigger('create');
+      buildHTML(data);
+      $('.chat-main__footer--form').val('')
+      $('.chat-main__footer--form-message').val('')
       $('.chat-main__body').animate({scrollTop:$('#target')[0].scrollHeight});
     })
     .fail(function(){

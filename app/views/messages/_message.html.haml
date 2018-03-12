@@ -1,4 +1,4 @@
-#target.messages-list
+#target.messages-list{"data-message-id": "#{message.id}"}
   .messages-list--message
     .messages-list--message-name
       = message.user.name
@@ -8,4 +8,4 @@
     .messages-list--message-body
       = message.body
   - if message.image.present?
-    %img.img{src: "#{message.image}"}
+    = image_tag "#{message.image}", class: "img"

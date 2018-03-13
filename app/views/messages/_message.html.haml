@@ -3,7 +3,7 @@
     .messages-list--message-name
       = message.user.name
     .messages-list--message-time
-      = message.created_at
+      = I18n.l(message.created_at)
   - if message.body.present?
     .messages-list--message-body
       = message.body
